@@ -8,7 +8,7 @@ import com.example.demo.model.User;
 
 public interface IGreetingService {
 	Greeting addGreeting(User user);
-	Greeting getGreetingById(long Id);
+	Greeting getGreetingById(Long Id);
 	List<Greeting> getAllGreetings();
 	
 

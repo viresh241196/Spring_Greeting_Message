@@ -8,19 +8,20 @@ import javax.persistence.Table;
 @Table(name="GREETINGS")
 public class Greeting {
 	@Id
+	public Long id;
 	public String message;
-	public long id;
+	
 
 	public Greeting() {
-		id=0;
+		id=0L;
 		message="";
 	}
-	public Greeting(long id,String message) {
+	public Greeting(Long id,String message) {
 		this.id= id;
 		this.message= message;
 	}
 	
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 	public String getmessage() {

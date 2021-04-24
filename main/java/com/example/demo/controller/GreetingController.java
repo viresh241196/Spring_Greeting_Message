@@ -37,4 +37,9 @@ public class GreetingController {
 		List<Greeting> greetings=greetingService.getAllGreetings();
 		return greetings;
 	}
+	
+	@GetMapping("findById")
+	public Greeting getGreetingById(@RequestParam(value="id",defaultValue="0")String id) {
+		return greetingService.getGreetingById(Long.parseLong(id));
+	}
 }
