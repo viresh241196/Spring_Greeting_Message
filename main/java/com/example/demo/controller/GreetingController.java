@@ -49,4 +49,10 @@ public class GreetingController {
 	 	Boolean result = greetingService.toEditMessage(Long.parseLong(id), message);
 	 	return result;
 	}
+	
+	@PutMapping("delete")
+	public Boolean deleteGreetingById(@RequestParam(value="id",defaultValue="0")String id) {
+	 	Boolean result = greetingService.deleteGreeting(Long.parseLong(id));
+	 	return result;
+	}
 }
