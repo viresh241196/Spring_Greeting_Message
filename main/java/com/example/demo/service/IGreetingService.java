@@ -10,6 +10,7 @@ public interface IGreetingService {
 	Greeting addGreeting(User user);
 	Greeting getGreetingById(Long Id);
 	List<Greeting> getAllGreetings();
+	Boolean toEditMessage(Long id,String message);
 	
 
 }

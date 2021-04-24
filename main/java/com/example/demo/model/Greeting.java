@@ -24,7 +24,10 @@ public class Greeting {
 	public Long getId() {
 		return id;
 	}
-	public String getmessage() {
+	public String getMessage() {
 		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
 	}
 }

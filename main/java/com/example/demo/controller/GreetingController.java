@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -41,5 +42,11 @@ public class GreetingController {
 	@GetMapping("findById")
 	public Greeting getGreetingById(@RequestParam(value="id",defaultValue="0")String id) {
 		return greetingService.getGreetingById(Long.parseLong(id));
+	}
+	
+	@PutMapping("edit")
+	public Boolean editGreetingById(@RequestParam(value="id",defaultValue="0")String id,@RequestParam(value= "message", defaultValue="")String message) {
+	 	Boolean result = greetingService.toEditMessage(Long.parseLong(id), message);
+	 	return result;
 	}
 }
